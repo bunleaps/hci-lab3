@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+
+    <main>
+      <div class="main">
+        <div class="about">
+          <div class="info">
+            <h3>BINUS University</h3>
+            <p>
+              BINUS University is a prestigious institution based in Jakarta,
+              Indonesia, renowned for its commitment to quality education. With
+              a wide range of programs in various disciplines, including
+              business, engineering, computer science, design, humanities, and
+              social sciences, BINUS University offers students a comprehensive
+              and practical education. The university's focus on
+              entrepreneurship and innovation encourages students to develop
+              their creative thinking and problem-solving skills, preparing them
+              for success in the dynamic and competitive professional world.
+            </p>
+            <br /><br />
+            <h3>Liger Leadership Academy</h3>
+            <p>
+              Liger Leadership Academy is an exceptional educational institution
+              in Cambodia that offers a transformative learning experience.
+              Through a rigorous curriculum and hands-on approach, Liger fosters
+              critical thinking, problem-solving, and leadership skills in its
+              students. The academy's focus on empowering young individuals from
+              diverse backgrounds prepares them to become future leaders and
+              catalysts for positive change in their communities and beyond.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <style>
+      div.main {
+        max-width: 900px;
+        padding-top: 50px;
+      }
+
+      div.main h1 {
+        margin: 0;
+        padding: 5px 10px;
+        color: #191919;
+        background: #1dd1a1;
+        display: inline-block;
+      }
+
+      /* div.about {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+      } */
+
+      .info p span {
+        color: #1dd1a1;
+        font-size: 15px;
+      }
+
+      .info p span:hover {
+        color: #191919;
+        background: #1dd1a1;
+      }
+
+      .info h3 {
+        margin: 0;
+        padding: 5px 10px;
+        color: #191919;
+        background: #1dd1a1;
+        display: inline-block;
+      }
+
+      .info ul {
+        columns: 3 auto;
+      }
+
+      .info ul li {
+        list-style-type: disc !important;
+      }
+
+      .pic {
+        margin-left: 10%;
+      }
+
+      .pic .aboutMe {
+        border-radius: 4%;
+      }
+
+      @media (max-width: 930px) {
+        div.about {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr -1fr;
+        }
+
+        .info ul {
+          columns: 2 auto;
+        }
+
+        .pic {
+          display: none;
+        }
+      }
+    </style>
+
+    <!-- <footer><%- include('../partials/footer'); %></footer> -->
+  </body>
+</html>

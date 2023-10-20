@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+
+    <main>
+      <div class="main">
+        <div class="heroImage">
+          <div>
+            <img
+              class="heroImg"
+              src="/images/hero.webp"
+              width="300"
+              height="300"
+              alt="Hero Image"
+            />
+          </div>
+        </div>
+        <div class="heroMain">
+          <div>
+            <span>Hi, my name is</span>
+            <h1 class="name">Bunleap Sorn</h1>
+            <h2 class="slogan">I built things for the web.</h2>
+            <p>
+              Hey there, I'm <span class="mark">Bunleap</span>! I just graduated
+              high school and now I'm starting a new journey at BINUS University
+              in Indonesia. I'm passionate about all things computer-related,
+              from coding to design to engineering.
+            </p>
+            <div>
+              <a
+                class="button"
+                target="_blank"
+                href="https://www.linkedin.com/in/bunleap-sorn-54a998137/"
+                >Linkedin</a
+              >
+              <a
+                class="button"
+                target="_blank"
+                href="https://github.com/bunleaps"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <style>
+      div.main {
+        width: 900px;
+        height: 550px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+      }
+
+      .heroImage {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+        align-items: center;
+      }
+
+      .heroImg {
+        border-radius: 50%;
+      }
+
+      .heroMain {
+        display: flex;
+        align-items: center;
+      }
+
+      .heroMain span {
+        font-size: 20px;
+      }
+
+      .heroMain h1 {
+        margin: 0;
+        font-size: 40px;
+      }
+
+      .heroMain h2 {
+        margin: 0;
+        font-size: 30px;
+      }
+
+      .heroMain .name {
+        color: #1dd1a1;
+      }
+
+      .heroMain .slogan {
+        color: whitesmoke;
+      }
+
+      .heroMain p {
+        width: 90%;
+      }
+
+      .heroMain p .mark {
+        color: #1dd1a1;
+        font-size: 15px;
+      }
+
+      .heroMain p .mark:hover {
+        color: #191919;
+        background: #1dd1a1;
+      }
+
+      .heroMain .button {
+        display: inline-block;
+        margin-top: 5px;
+        margin-right: 10px;
+        padding: 15px 30px;
+        background: none;
+        border: 1px solid #1dd1a1;
+        color: #1dd1a1;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .heroMain .button:hover {
+        background: #1dd1a1;
+        color: #191919;
+      }
+
+      @media (max-width: 930px) {
+        div.main {
+          grid-template-columns: auto;
+          grid-template-rows: 1fr 1fr;
+          margin-bottom: 150px;
+        }
+
+        .heroImage {
+          margin-top: 50px;
+          justify-content: center;
+        }
+
+        .heroImage div {
+          margin-left: 8%;
+        }
+
+        .heroMain {
+          justify-content: center;
+        }
+
+        .heroMain div {
+          justify-content: center;
+          text-align: center;
+          width: 80%;
+        }
+
+        .heroMain p {
+          width: 50%;
+          display: inline-block;
+        }
+
+        .heroMain div div {
+          display: inline-block;
+        }
+      }
+    </style>
+
+    <!-- <footer><%- include('../partials/footer'); %></footer> -->
+  </body>
+</html>

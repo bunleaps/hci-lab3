@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+
+    <main>
+      <div class="main">
+        <div class="about">
+          <div class="info">
+            <p>
+              Over the years, I have built a diverse skill set, gaining
+              expertise in web development, design, and backend programming. I
+              am well-versed in a variety of technologies and tools used in
+              these fields. With my broad skill set, I am equipped to take on
+              various projects and adapt to new challenges with confidence.
+            </p>
+            <h3>My Skills Set</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>MongoDB</li>
+              <li>WordPress</li>
+              <li>Python</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>InDesign</li>
+              <li>Premiere Pro</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="pic">
+            <img
+              class="aboutMe"
+              src="images/bunleap.jpeg"
+              width="300"
+              height="300"
+              alt="My Picture"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <style>
+      div.main {
+        max-width: 900px;
+        padding-top: 50px;
+      }
+
+      div.main h1 {
+        margin: 0;
+        padding: 5px 10px;
+        color: #191919;
+        background: #1dd1a1;
+        display: inline-block;
+      }
+
+      div.about {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+      }
+
+      .info p span {
+        color: #1dd1a1;
+        font-size: 15px;
+      }
+
+      .info p span:hover {
+        color: #191919;
+        background: #1dd1a1;
+      }
+
+      .info h3 {
+        margin: 0;
+        padding: 5px 10px;
+        color: #191919;
+        background: #1dd1a1;
+        display: inline-block;
+      }
+
+      .info ul {
+        columns: 3 auto;
+      }
+
+      .info ul li {
+        list-style-type: disc !important;
+      }
+
+      .pic {
+        margin-left: 10%;
+      }
+
+      .pic .aboutMe {
+        border-radius: 4%;
+      }
+
+      @media (max-width: 930px) {
+        div.about {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr -1fr;
+        }
+
+        .info ul {
+          columns: 2 auto;
+        }
+
+        .pic {
+          display: none;
+        }
+      }
+    </style>
+
+    <!-- <footer><%- include('../partials/footer'); %></footer> -->
+  </body>
+</html>
