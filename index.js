@@ -1,8 +1,12 @@
-const express = require("express");
-const path = require("path");
-const livereload = require("livereload");
-const connectLivereload = require("connect-livereload");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+import livereload from "livereload";
+import connectLivereload from "connect-livereload";
+
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(path.join(__dirname, "public"));
