@@ -1,22 +1,22 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import livereload from "livereload";
-import connectLivereload from "connect-livereload";
+// import livereload from "livereload";
+// import connectLivereload from "connect-livereload";
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, "public"));
-app.use(connectLivereload());
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.watch(path.join(__dirname, "public"));
+// app.use(connectLivereload());
 
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-});
+// liveReloadServer.server.once("connection", () => {
+//   setTimeout(() => {
+//     liveReloadServer.refresh("/");
+//   }, 100);
+// });
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
